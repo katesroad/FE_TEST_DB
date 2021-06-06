@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render <Form /> submit without filling form 1`] = `
+<div>
+  <form
+    action="#"
+    class="form"
+  >
+    <p>
+      <span
+        class="label"
+      >
+        Email:
+      </span>
+      <input
+        name="email"
+        placeholder="Enter email"
+        value=""
+      />
+      <small />
+    </p>
+    <p>
+      <span
+        class="label"
+      >
+        Password:
+      </span>
+      <input
+        name="password"
+        placeholder="Enter password"
+        type="password"
+        value=""
+      />
+      <small />
+    </p>
+    <p>
+      <button
+        type="submit"
+      >
+        submit
+      </button>
+    </p>
+  </form>
+</div>
+`;
+
+exports[`Render <Form /> submit without filling form 2`] = `
+<div>
+  <form
+    action="#"
+    class="form"
+  >
+    <p>
+      <span
+        class="label"
+      >
+        Email:
+      </span>
+      <input
+        name="email"
+        placeholder="Enter email"
+        value=""
+      />
+      <small>
+        Please enter email
+      </small>
+    </p>
+    <p>
+      <span
+        class="label"
+      >
+        Password:
+      </span>
+      <input
+        name="password"
+        placeholder="Enter password"
+        type="password"
+        value=""
+      />
+      <small>
+        Please enter password
+      </small>
+    </p>
+    <p>
+      <button
+        type="submit"
+      >
+        submit
+      </button>
+    </p>
+  </form>
+</div>
+`;

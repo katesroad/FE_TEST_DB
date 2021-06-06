@@ -1,0 +1,10 @@
+.form {
+  button {
+    cursor: pointer;
+  }
+  // the error message for field
+  p small {
+    display: block;
+    color: red;
+  }
+}
