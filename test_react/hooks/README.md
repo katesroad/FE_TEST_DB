@@ -29,3 +29,6 @@
 
   const mockedAxios = axios as jest.Mocked<typeof axios>
   ```
+
+- **CAUTION** <br/>
+  set _catch_ for promise results in error won't be triggered inside the react-query result
