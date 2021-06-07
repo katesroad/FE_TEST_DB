@@ -30,5 +30,8 @@
   const mockedAxios = axios as jest.Mocked<typeof axios>
   ```
 
-- **CAUTION** <br/>
-  set _catch_ for promise results in error won't be triggered inside the react-query result
+  - **CAUTION** <br/>
+    set _catch_ for promise results in error won't be triggered inside the react-query result
+  - Render result controlled by _is[status]_ parameter in mutation/query result.
+    - [test case](./src/hooks/src/components/Todo)
+    - [Slow tutorial](https://www.youtube.com/watch?v=ZfvOHRX-FDM&ab_channel=MaksimIvanov)

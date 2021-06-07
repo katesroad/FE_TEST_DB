@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render <Todo /> after data has been fetched 1`] = `
+<div>
+  <div>
+    <h4>
+      delectus aut autem
+    </h4>
+    <p>
+      ID: $
+      1
+    </p>
+    <p>
+      Completed: 
+      no
+    </p>
+    <p>
+      user: 
+      1
+    </p>
+  </div>
+</div>
+`;
+
+exports[`render <Todo /> after getting data failed 1`] = `
+<div>
+  <p
+    role="alert"
+  >
+    failed to load todo
+  </p>
+</div>
+`;
+
+exports[`render <Todo /> after getting data successfully 1`] = `
+<div>
+  <div>
+    <h4>
+      delectus aut autem
+    </h4>
+    <p>
+      ID: $
+      1
+    </p>
+    <p>
+      Completed: 
+      no
+    </p>
+    <p>
+      user: 
+      1
+    </p>
+  </div>
+</div>
+`;
+
+exports[`render <Todo /> when loading data 1`] = `
+<div>
+  <p
+    aria-label="loading"
+  >
+    loading...
+  </p>
+</div>
+`;
