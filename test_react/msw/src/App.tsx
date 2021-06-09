@@ -14,7 +14,7 @@ function App() {
         </header>
         <Switch>
           <Route path="/" exact component={HomeScreen} />
-          <Route path="/todo/:id" exact component={TodoScreen} />
+          <Route path="/todos/:id" exact component={TodoScreen} />
         </Switch>
       </BrowserRouter>
     </QueryClientProvider>

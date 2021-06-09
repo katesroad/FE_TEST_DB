@@ -5,6 +5,8 @@ import { useGetTodoList } from '../hooks/json.hooks'
 import { IToDo } from '../types'
 import { Todo } from '../components/common/Todo'
 import { Link } from 'react-router-dom'
+// eslint-disable-next-line
+import styled from 'styled-components/macro'
 
 export default function HomeScreen() {
   const { status, data } = useGetTodoList()
@@ -15,11 +17,21 @@ export default function HomeScreen() {
       {['loading', 'idel'].includes(status) ? (
         <Loading />
       ) : status === 'success' ? (
-        <ul>
+        <ul
+          css={`
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            a {
+              color: inherit;
+              text-decoration: none;
+            }
+          `}
+        >
           {data?.map((todo: IToDo) => {
             return (
               <li key={todo.id}>
-                <Link to={`/todo/${todo.id}`}>
+                <Link to={`/todos/${todo.id}`}>
                   <Todo {...todo} />
                 </Link>
               </li>
