@@ -2,6 +2,10 @@
 
 Mock Service Worker is an API mocking library that uses Service Worker API to intercept actual requests. Usually, people use it in testing and debuging purpose.
 
+## Mocking Rule
+
+At least make sure the data schema to be identical.
+
 ## MSW
 
 - Runing at client side for mocking: [**Start worker**](https://mswjs.io/docs/getting-started/integrate/browser#start-worker)

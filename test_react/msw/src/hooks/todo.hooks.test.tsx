@@ -3,6 +3,7 @@ import { useGetTodo } from './todo.hooks'
 import { QueryClientProvider, QueryClient } from 'react-query'
 import axios from 'axios'
 import { cleanup } from '@testing-library/react'
+import { TODO_LIST } from '../mocks/data'
 
 jest.mock('axios', () => ({
   get: jest.fn(),
@@ -27,13 +28,8 @@ beforeEach(() => {
 
 test('useGetToDo gets data successfully', async () => {
   const toDoId = 1
-  const todo = {
-    userId: 1,
-    id: 1,
-    title: 'delectus aut autem',
-    completed: false,
-  }
-  mockedAxios.get.mockResolvedValueOnce({ data: { data: todo, ok: true } })
+  const todo = TODO_LIST[1]
+  mockedAxios.get.mockResolvedValueOnce({ data: todo })
   const { result, waitFor } = renderHook(() => useGetTodo(toDoId), {
     wrapper: Wrapper,
   })
@@ -43,14 +39,11 @@ test('useGetToDo gets data successfully', async () => {
 })
 
 test('useGetToDo gets data failed', async () => {
-  const toDoId = 1
-  mockedAxios.get.mockRejectedValueOnce({
-    data: { msg: 'Unauthenticated request', ok: false },
-  })
+  const toDoId = TODO_LIST[0].id
+  mockedAxios.get.mockRejectedValueOnce(null)
   const { result, waitFor } = renderHook(() => useGetTodo(toDoId), {
     wrapper: Wrapper,
   })
-
   await waitFor(() => result.current.isFetched)
   expect(result.current.isError).toBeTruthy()
 })

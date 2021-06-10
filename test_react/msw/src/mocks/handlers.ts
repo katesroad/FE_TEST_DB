@@ -9,30 +9,17 @@ const getUrl = (path: string) => `${API_HOST}/${path}`
 
 export const handlers = [
   rest.get(getUrl('todos'), (req, res, ctx) => {
-    return res(
-      ctx.json({
-        ok: true,
-        data: TODO_LIST,
-      })
-    )
+    return res(ctx.json(TODO_LIST))
   }),
   rest.get(getUrl('todos/:id'), (req, res, ctx) => {
     const { id } = req.params
     // the standard usage of response
     // Doc: https://mswjs.io/docs/api/response#standard-usage
     if (isNaN(+id)) {
-      return res(
-        ctx.status(400),
-        ctx.json({ ok: false, msg: 'Please provide an valid todo id.' })
-      )
+      return res(ctx.status(400), ctx.json(null))
     }
     const todo = TODO_LIST.find((todo) => todo.id === +id)
     const status = todo ? 200 : 404
-    const data = {
-      data: todo,
-      msg: todo ? undefined : `Can't find a todo with id#${id}`,
-      ok: todo ? true : false,
-    }
-    return res(ctx.status(status), ctx.json(data))
+    return res(ctx.status(status), ctx.json(todo))
   }),
 ]

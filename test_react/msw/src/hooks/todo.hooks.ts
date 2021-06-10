@@ -4,15 +4,7 @@ import { IToDo } from '../types'
 
 const getUrl = (path: string) => `${process.env.REACT_APP_API_URL}/${path}`
 
-const getData = (res: AxiosResponse) => {
-  try {
-    const { data, ok, msg = 'unknown error' } = res.data
-    if (ok) return data
-    else return Promise.reject(msg)
-  } catch (e) {
-    return Promise.reject(e)
-  }
-}
+const getData = (res: AxiosResponse) => res.data
 
 /**
  * Get todo by todo ID
