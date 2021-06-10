@@ -2,10 +2,10 @@ import { useQuery, UseQueryResult } from 'react-query'
 import axios from 'axios'
 import { IToDo } from '../types'
 
-const isDev = process.env.NODE_ENV === 'development' ? true : false
-axios.defaults.baseURL = isDev
-  ? 'http://localhost:3000'
-  : process.env.REACT_APP_API_URL
+const isProd = process.env.NODE_ENV === 'production' ? true : false
+axios.defaults.baseURL = isProd
+  ? process.env.REACT_APP_API_URL
+  : 'http://localhost:3000'
 
 axios.interceptors.response.use(
   (res) => {

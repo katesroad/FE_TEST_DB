@@ -1,10 +1,10 @@
 import { rest } from 'msw'
 import { TODO_LIST } from './data'
 
-const isDev = process.env.NODE_ENV === 'development' ? true : false
-const API_HOST = isDev
-  ? 'http://localhost:3000'
-  : process.env.REACREACT_APP_API_URL
+const isProd = process.env.NODE_ENV === 'production' ? true : false
+const API_HOST = isProd
+  ? process.env.REACREACT_APP_API_URL
+  : 'http://localhost:3000'
 
 const getUrl = (path: string) => `${API_HOST}/${path}`
 
