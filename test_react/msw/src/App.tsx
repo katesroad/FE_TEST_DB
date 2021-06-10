@@ -1,8 +1,8 @@
 import React from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
-import HomeScreen from './screen/index.screen'
-import TodoScreen from './screen/todo.screen'
+import HomeScreen from './screens/index.screen'
+import TodoScreen from './screens/todo.screen'
 
 const client = new QueryClient()
 function App() {

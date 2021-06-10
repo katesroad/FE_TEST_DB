@@ -5,7 +5,7 @@ import {
 } from '@testing-library/react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { MemoryRouter, Route, Switch } from 'react-router-dom'
-import TodoScreen from '../screen/todo.screen'
+import TodoScreen from '../screens/todo.screen'
 
 const client = new QueryClient({
   defaultOptions: { queries: { retry: 0 } },
