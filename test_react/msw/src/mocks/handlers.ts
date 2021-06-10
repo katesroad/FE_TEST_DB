@@ -30,12 +30,12 @@ export const handlers = [
       )
     }
     const todo = TODO_LIST.find((todo) => todo.id === +id)
-    return res(
-      ctx.status(200),
-      ctx.json({
-        data: todo,
-        ok: true,
-      })
-    )
+    const status = todo ? 200 : 404
+    const data = {
+      data: todo,
+      msg: todo ? undefined : `Can't find a todo with id#${id}`,
+      ok: todo ? true : false,
+    }
+    return res(ctx.status(status), ctx.json(data))
   }),
 ]

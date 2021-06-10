@@ -8,14 +8,12 @@ import { MemoryRouter, Route, Switch } from 'react-router-dom'
 import TodoScreen from '../screen/todo.screen'
 
 const client = new QueryClient({
-  defaultOptions: {
-    queries: { retry: 0 },
-  },
+  defaultOptions: { queries: { retry: 0 } },
 })
 
-test('render <TodoScreen />', async () => {
-  const { container } = render(
-    <MemoryRouter initialEntries={[{ pathname: '/todos/1' }]}>
+const renderTodoScreen = (pathname: string) => {
+  return render(
+    <MemoryRouter initialEntries={[{ pathname }]}>
       <QueryClientProvider client={client}>
         <Switch>
           <Route component={TodoScreen} path="/todos/:id" />
@@ -23,23 +21,19 @@ test('render <TodoScreen />', async () => {
       </QueryClientProvider>
     </MemoryRouter>
   )
-  expect(screen.getByText(/Loading/i)).toBeInTheDocument()
+}
 
+test('render <TodoScreen />, load data successfully', async () => {
+  const { container } = renderTodoScreen('/todos/1')
+  expect(screen.getByText(/Loading/i)).toBeInTheDocument()
   await waitForElementToBeRemoved(screen.getByText(/Loading/i))
-  expect(container).toMatchInlineSnapshot(`
-    <div>
-      <div
-        class="Todo___StyledDiv-sc-5e6tjb-0 cmvIFh"
-      >
-        <h4>
-          delectus aut autem
-        </h4>
-        <p>
-          Completed: 
-          No
-           
-        </p>
-      </div>
-    </div>
-  `)
+  expect(container).toMatchSnapshot()
+})
+
+test('render <TodoScreen />, load data failed', async () => {
+  // there is no todo with an id of 2000 at the mocking service
+  const { container } = renderTodoScreen('/todos/2000')
+  expect(screen.getByText(/Loading/i)).toBeInTheDocument()
+  await waitForElementToBeRemoved(screen.getByText(/Loading/i))
+  expect(container).toMatchSnapshot()
 })
