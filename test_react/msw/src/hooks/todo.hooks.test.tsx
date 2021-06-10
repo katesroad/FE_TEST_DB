@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks'
-import { useGetTodo } from './json.hooks'
+import { useGetTodo } from './todo.hooks'
 import { QueryClientProvider, QueryClient } from 'react-query'
 import axios from 'axios'
 import { cleanup } from '@testing-library/react'
@@ -33,7 +33,7 @@ test('useGetToDo gets data successfully', async () => {
     title: 'delectus aut autem',
     completed: false,
   }
-  mockedAxios.get.mockResolvedValueOnce({ data: todo })
+  mockedAxios.get.mockResolvedValueOnce({ data: { data: todo, ok: true } })
   const { result, waitFor } = renderHook(() => useGetTodo(toDoId), {
     wrapper: Wrapper,
   })
@@ -44,7 +44,9 @@ test('useGetToDo gets data successfully', async () => {
 
 test('useGetToDo gets data failed', async () => {
   const toDoId = 1
-  mockedAxios.get.mockRejectedValueOnce({ message: 'Unauthenticated request' })
+  mockedAxios.get.mockRejectedValueOnce({
+    data: { msg: 'Unauthenticated request', ok: false },
+  })
   const { result, waitFor } = renderHook(() => useGetTodo(toDoId), {
     wrapper: Wrapper,
   })

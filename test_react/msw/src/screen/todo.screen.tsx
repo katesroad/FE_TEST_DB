@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 import { ErrorMsg } from '../components/common/ErrorMsg'
 import { Loading } from '../components/common/Loading'
 import { Todo } from '../components/common/Todo'
-import { useGetTodo } from '../hooks/json.hooks'
+import { useGetTodo } from '../hooks/todo.hooks'
 
 export default function TodoScreen() {
   const { id } = useParams<{ id: string }>()

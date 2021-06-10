@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Loading } from '../components/common/Loading'
 import { ErrorMsg } from '../components/common/ErrorMsg'
-import { useGetTodoList } from '../hooks/json.hooks'
+import { useGetTodoList } from '../hooks/todo.hooks'
 import { IToDo } from '../types'
 import { Todo } from '../components/common/Todo'
 import { Link } from 'react-router-dom'
