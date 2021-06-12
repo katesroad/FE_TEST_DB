@@ -7,6 +7,6 @@ app.post('api/v1/users', (req, res) => {
   res.json({});
 });
 
-sequelize.sync();
+sequelize.sync({ force: true });
 
 export default app;
