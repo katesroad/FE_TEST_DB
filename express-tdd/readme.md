@@ -18,3 +18,4 @@
 - [use sequelize with typescript](https://sequelize.org/master/manual/typescript.html#installation-)
 - [config](https://www.npmjs.com/package/config)
 - [cross-env](https://www.npmjs.com/package/cross-env)
+- [request body validation in express](https://express-validator.github.io/docs/)
