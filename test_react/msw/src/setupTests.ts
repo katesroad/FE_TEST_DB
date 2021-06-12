@@ -16,3 +16,5 @@ if (process.env.NODE_ENV === 'test') {
   beforeAll(() => server.listen())
   afterAll(() => server.close())
 }
+
+jest.setTimeout(15000)

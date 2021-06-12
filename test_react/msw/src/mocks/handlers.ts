@@ -19,6 +19,7 @@ export const handlers = [
       return res(ctx.status(400), ctx.json(null))
     }
     const todo = TODO_LIST.find((todo) => todo.id === +id)
+    console.log('result', todo)
     const status = todo ? 200 : 404
     return res(ctx.status(status), ctx.json(todo))
   }),

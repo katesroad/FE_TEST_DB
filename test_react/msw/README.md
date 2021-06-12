@@ -35,3 +35,4 @@ At least make sure the data schema to be identical.
 
 - [what is msw](https://mswjs.io/)
 - [what is service worker](https://developers.google.com/web/fundamentals/primers/service-workers)
+- [setupTimeout](https://jestjs.io/docs/jest-object#jestsettimeouttimeout)
