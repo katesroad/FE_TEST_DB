@@ -11,7 +11,6 @@ export const Todo: React.FC<{ id: number }> = ({ id }) => {
         <h4>{data?.title}</h4>
         <p>ID: ${data?.id}</p>
         <p>Completed: {data?.completed ? 'yes' : 'no'}</p>
-        <p>user: {data?.userId}</p>
       </div>
     )
   }
