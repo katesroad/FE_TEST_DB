@@ -11,3 +11,10 @@
 - [Setup Typescript, Jest, Express for Unit Test](https://losikov.medium.com/part-4-node-js-express-typescript-unit-tests-with-jest-5204414bf6f0)
 
 - [Install SQLlite on unbuntu](https://linuxhint.com/install_sqlite_browser_ubuntu_1804/)
+
+## Packages
+
+- [sequelize tutorial](https://sequelize.org/master/manual/getting-started.html)
+- [use sequelize with typescript](https://sequelize.org/master/manual/typescript.html#installation-)
+- [config](https://www.npmjs.com/package/config)
+- [cross-env](https://www.npmjs.com/package/cross-env)

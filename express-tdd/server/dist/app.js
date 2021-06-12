@@ -8,5 +8,6 @@ const app = express_1.default();
 app.post('api/v1/users', (req, res) => {
     res.json({});
 });
+console.log(process.env.NODE_ENV);
 exports.default = app;
 //# sourceMappingURL=app.js.map
