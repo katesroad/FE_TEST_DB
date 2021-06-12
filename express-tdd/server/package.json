@@ -5,9 +5,9 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "tsc & node .",
-    "dev": "tsc -w & nodemon .",
-    "test": "jest --watchAll"
+    "start": "cross-env NODE_ENV=production tsc & node .",
+    "dev": "cross-env NODE_ENV=development tsc -w & nodemon .",
+    "test": "cross-env NODE_ENV=test jest --watchAll"
   },
   "keywords": [],
   "author": "",
