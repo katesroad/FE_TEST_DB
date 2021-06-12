@@ -12,6 +12,8 @@
 
 - [Install SQLlite on unbuntu](https://linuxhint.com/install_sqlite_browser_ubuntu_1804/)
 
+- [An good example of how to organize express application code](https://github.com/tkssharma/e-CommerseHub)
+
 ## Packages
 
 - [sequelize tutorial](https://sequelize.org/master/manual/getting-started.html)
