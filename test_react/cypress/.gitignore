@@ -2,6 +2,10 @@ node_modules
 
 todo.txt
 
+# env file
+
+.env
+
 # cypress example files
 
-cypress/examples
+cypress/examples/

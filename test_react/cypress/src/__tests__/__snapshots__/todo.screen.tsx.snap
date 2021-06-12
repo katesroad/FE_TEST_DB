@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render <TodoScreen />, load data failed 1`] = `
+<div>
+  <header>
+    <a
+      href="/"
+    >
+      Home
+    </a>
+  </header>
+  <div
+    class="ErrorMsg___StyledDiv-sc-11bc7qw-0 cjOpSh"
+  >
+    Failed to load todo
+  </div>
+</div>
+`;
+
+exports[`render <TodoScreen />, load data successfully 1`] = `
+<div>
+  <header>
+    <a
+      href="/"
+    >
+      Home
+    </a>
+  </header>
+  <div
+    class="Todo___StyledDiv-sc-5e6tjb-0 cmvIFh"
+  >
+    <h4>
+      delectus aut autem
+    </h4>
+    <p>
+      Completed: 
+      No
+       
+    </p>
+  </div>
+</div>
+`;
