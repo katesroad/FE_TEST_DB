@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import { validationResult } from 'express-validator';
 import { User } from './model';
 
-export async function userRegister(
+export async function registerHandler(
   req: Request,
   res: Response,
   next: NextFunction
