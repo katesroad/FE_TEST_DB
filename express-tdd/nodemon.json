@@ -1,8 +1,0 @@
-{
-  "events": {
-    "restart": "kill-port 8888",
-    "crash": "kill-port 8888"
-  },
-  "verbose":true,
-  "delay": "1500"
-}
