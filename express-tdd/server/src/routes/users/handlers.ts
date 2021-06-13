@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { validationResult } from 'express-validator';
-import { User } from './model';
+import userRepo from '../../models/user-model';
 
 export async function registerHandler(
   req: Request,
@@ -9,10 +9,13 @@ export async function registerHandler(
 ) {
   const { username, email, password } = req.body;
   const errors = validationResult(req);
-  if (errors) {
+  /**
+   * Test request.body shape
+   * Doc: https://express-validator.github.io/docs/index.html
+   */
+  if (!errors.isEmpty()) {
     return res.status(400).json({
-      msg: 'Bad request',
-      errors,
+      msg: 'Bad request. Please check user data',
     });
   }
   try {
@@ -20,7 +23,7 @@ export async function registerHandler(
      * Create an user recored
      * Doc: https://sequelize.org/master/manual/model-instances.html
      */
-    const user = await User.create({ username, email, password });
+    const user = await userRepo.create({ username, email, password });
     return res.status(200).json(user);
   } catch (e) {
     next(e);

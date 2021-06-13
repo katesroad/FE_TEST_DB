@@ -21,3 +21,7 @@
 - [config](https://www.npmjs.com/package/config)
 - [cross-env](https://www.npmjs.com/package/cross-env)
 - [request body validation in express](https://express-validator.github.io/docs/)
+
+## FAQ
+
+- [Solve port already in use issue when using nodemon](https://stackoverflow.com/questions/58605392/port-3000-is-already-in-use-nodemon-app-crashed-waiting-for-file-changes-bef)

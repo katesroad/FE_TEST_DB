@@ -1,11 +1,11 @@
 import { DataTypes } from 'sequelize';
-import { sequelize } from '../../config/database';
+import { sequelize } from '../config/database';
 
 /**
  * Define User model
  * Doc: https://sequelize.org/master/manual/model-basics.html
  */
-export const User = sequelize.define(
+export const UserModel = sequelize.define(
   'User',
   {
     username: {
@@ -25,3 +25,21 @@ export const User = sequelize.define(
     // Other model options go here
   }
 );
+
+class User {
+  readonly model = UserModel;
+
+  create(user: any) {
+    return this.model.create(user);
+  }
+
+  findOne(filter: any) {
+    return this.model.findOne(filter);
+  }
+
+  findAll(filter: any) {
+    return this.model.findAll(filter);
+  }
+}
+
+export default new User();

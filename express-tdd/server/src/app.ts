@@ -1,15 +1,13 @@
+import bodyParser from 'body-parser';
 import express, { Application } from 'express';
 import { sequelize } from './config/database';
-import userRoute from './routes/users';
-
-const app: Application = express();
-
-app.post('api/v1/users', (req, res) => {
-  res.json({});
-});
+import usersRouter from './routes/users';
 
 sequelize.sync({ force: true });
 
-app.use('api/1.0/users', userRoute);
+const app: Application = express();
+
+app.use(bodyParser());
+app.use('/api/1.0/users', usersRouter);
 
 export default app;

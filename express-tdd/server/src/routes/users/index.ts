@@ -3,17 +3,19 @@ import { registerHandler } from './handlers';
 import { registerValidators } from './validators';
 
 /**
- * User Routeer
+ * User Router
+ * idea comes from: https://github.com/tkssharma/e-CommerseHub
  */
-class UserRoute {
+class UsersRoute {
   readonly router: Router;
   constructor() {
     this.router = Router();
+    this.init();
   }
 
-  init() {
-    this.router.post('register', ...registerValidators, registerHandler);
+  private init() {
+    this.router.post('/register', ...registerValidators, registerHandler);
   }
 }
 
-export default new UserRoute().router;
+export default new UsersRoute().router;

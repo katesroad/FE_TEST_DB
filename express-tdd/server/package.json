@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/validator": "^13.1.4",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-validator": "^6.11.1",
     "sequelize": "^6.6.2",
@@ -36,6 +37,7 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
     "jest": "^27.0.4",
+    "kill-port": "^1.6.1",
     "nodemon": "^2.0.7",
     "prettier": "^2.3.1",
     "supertest": "^6.1.3",
