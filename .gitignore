@@ -5,3 +5,8 @@ todo.txt
 # cypress example files
 
 cypress/examples
+
+
+# ignore build files
+dist
+build
