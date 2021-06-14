@@ -1,5 +1,5 @@
 import bodyParser from 'body-parser';
-import express, { Application } from 'express';
+import express, { Application, Response, Request } from 'express';
 import { sequelize } from './config/database';
 import usersRouter from './routes/users';
 
