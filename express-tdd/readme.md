@@ -1,6 +1,7 @@
 # Express TDD
 
 - Course Page: https://www.udemy.com/course/test-driven-development-with-nodejs
+- Thoughts: Having a good understanding with project demands is the start of TDD.
 
 ## Notes
 
