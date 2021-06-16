@@ -38,4 +38,4 @@ COPY --from=builder /home/node/dist/ /home/node/dist/
 
 RUN npm ci
 
-CMD ["node", "dist/server.js"]
+CMD ["node", "dist/main.js"]
