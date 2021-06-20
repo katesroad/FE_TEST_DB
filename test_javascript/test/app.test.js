@@ -1,11 +1,13 @@
 const { assert } = require('chai')
 const app = require('../app')
 
+// describe, defined by test runner
 describe('app', () => {
   describe('sayHello', () => {
     const sayHelloResult = app.sayHello()
     it('app.sayHello should return Hello', () => {
-      //   usually, we keep the result in a varaible as result
+      // usually, we keep the result in a varaible as result
+      // assert, defined by assertion library
       assert.equal(sayHelloResult, 'Hello')
     })
     it('app.sayHello should return string', () => {
