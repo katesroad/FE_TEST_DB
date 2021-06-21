@@ -2,11 +2,11 @@
 
 - [Mocha](https://mochajs.org/): Test runner
 - [Chai](https://www.chaijs.com/): Assertion library
-- [Sion](https://sinonjs.org/#get-started): Provide _mock/stub/spy_ type functionality
+- [Sinon](https://sinonjs.org/#get-started): Provide _mock/stub/spy_ type functionality
 
 ## References
 
-- Mocha itseful doesn't provide mock/stub/spy type functionality](https://sinonjs.org/)
+- [Mocha itseful doesn't provide mock/stub/spy type functionality](https://sinonjs.org/)
 
 ## Tutorials
 
