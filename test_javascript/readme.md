@@ -5,7 +5,8 @@
 - [Mocha](https://mochajs.org/): Test runner
 - [Chai](https://www.chaijs.com/): Assertion library
 - [Sion](https://sinonjs.org/#get-started): Provide _mock/stub/spy_ type functionality
-- [supertest](https://github.com/visionmedia/supertest)
+- [supertest](https://github.com/visionmedia/supertest) For E2E testing
+- [nock](https://www.npmjs.com/package/nock): simulate latency in node testing.
 
 ## Concepts
 
